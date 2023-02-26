@@ -2,11 +2,11 @@
 
 > Xcode 14.2, iOS 16+
 
-## Tech used: 
+## Tech used
 
 - SwiftUI
 
-## Logic implemented:
+## Logic implemented
 
 - A user can generate some text with a button. Generated text consists of alphanumeric characters, separated with spaces only (for simplicity). 
 - This text varies in length with a default bounds of 1 to 100 words. Word length varies with default bounds of 1 to 15 characters.
