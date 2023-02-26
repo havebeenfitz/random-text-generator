@@ -4,7 +4,10 @@ import SwiftUI
 struct RandomFieldApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                GeneratorView()
+                    .navigationTitle("Random text generator")
+            }
         }
     }
 }

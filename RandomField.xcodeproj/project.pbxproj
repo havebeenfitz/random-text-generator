@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4D6F650029AB9328005265D6 /* RandomFieldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F64FF29AB9328005265D6 /* RandomFieldApp.swift */; };
-		4D6F650229AB9328005265D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F650129AB9328005265D6 /* ContentView.swift */; };
+		4D6F650229AB9328005265D6 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F650129AB9328005265D6 /* GeneratorView.swift */; };
 		4D6F650429AB9329005265D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F650329AB9329005265D6 /* Assets.xcassets */; };
 		4D6F650729AB9329005265D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F650629AB9329005265D6 /* Preview Assets.xcassets */; };
 		4D6F651229AB9329005265D6 /* RandomFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F651129AB9329005265D6 /* RandomFieldTests.swift */; };
 		4D6F651C29AB9329005265D6 /* RandomFieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F651B29AB9329005265D6 /* RandomFieldUITests.swift */; };
 		4D6F651E29AB9329005265D6 /* RandomFieldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F651D29AB9329005265D6 /* RandomFieldUITestsLaunchTests.swift */; };
+		4D6F652B29AB97C2005265D6 /* RandomTextGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F652A29AB97C2005265D6 /* RandomTextGenerator.swift */; };
+		4D6F652E29AB9B4C005265D6 /* VSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F652D29AB9B4C005265D6 /* VSpacer.swift */; };
+		4D6F653029ABA04A005265D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6F652F29ABA04A005265D6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		4D6F64FC29AB9328005265D6 /* RandomField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6F64FF29AB9328005265D6 /* RandomFieldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFieldApp.swift; sourceTree = "<group>"; };
-		4D6F650129AB9328005265D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4D6F650129AB9328005265D6 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
 		4D6F650329AB9329005265D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D6F650629AB9329005265D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D6F650829AB9329005265D6 /* RandomField.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RandomField.entitlements; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		4D6F651729AB9329005265D6 /* RandomFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6F651B29AB9329005265D6 /* RandomFieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFieldUITests.swift; sourceTree = "<group>"; };
 		4D6F651D29AB9329005265D6 /* RandomFieldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFieldUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D6F652A29AB97C2005265D6 /* RandomTextGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTextGenerator.swift; sourceTree = "<group>"; };
+		4D6F652D29AB9B4C005265D6 /* VSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSpacer.swift; sourceTree = "<group>"; };
+		4D6F652F29ABA04A005265D6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +101,14 @@
 		4D6F64FE29AB9328005265D6 /* RandomField */ = {
 			isa = PBXGroup;
 			children = (
+				4D6F652C29AB9B42005265D6 /* UIExtensions */,
+				4D6F652A29AB97C2005265D6 /* RandomTextGenerator.swift */,
 				4D6F64FF29AB9328005265D6 /* RandomFieldApp.swift */,
-				4D6F650129AB9328005265D6 /* ContentView.swift */,
+				4D6F650129AB9328005265D6 /* GeneratorView.swift */,
 				4D6F650329AB9329005265D6 /* Assets.xcassets */,
 				4D6F650829AB9329005265D6 /* RandomField.entitlements */,
 				4D6F650529AB9329005265D6 /* Preview Content */,
+				4D6F652F29ABA04A005265D6 /* LaunchScreen.storyboard */,
 			);
 			path = RandomField;
 			sourceTree = "<group>";
@@ -127,6 +136,14 @@
 				4D6F651D29AB9329005265D6 /* RandomFieldUITestsLaunchTests.swift */,
 			);
 			path = RandomFieldUITests;
+			sourceTree = "<group>";
+		};
+		4D6F652C29AB9B42005265D6 /* UIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F652D29AB9B4C005265D6 /* VSpacer.swift */,
+			);
+			path = UIExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6F653029ABA04A005265D6 /* LaunchScreen.storyboard in Resources */,
 				4D6F650729AB9329005265D6 /* Preview Assets.xcassets in Resources */,
 				4D6F650429AB9329005265D6 /* Assets.xcassets in Resources */,
 			);
@@ -259,7 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D6F650229AB9328005265D6 /* ContentView.swift in Sources */,
+				4D6F652E29AB9B4C005265D6 /* VSpacer.swift in Sources */,
+				4D6F650229AB9328005265D6 /* GeneratorView.swift in Sources */,
+				4D6F652B29AB97C2005265D6 /* RandomTextGenerator.swift in Sources */,
 				4D6F650029AB9328005265D6 /* RandomFieldApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +443,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -430,8 +451,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.setmysails.RandomField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,6 +473,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -455,8 +481,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.setmysails.RandomField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
