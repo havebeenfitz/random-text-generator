@@ -8,13 +8,14 @@
 
 ## Logic implemented:
 
-- User can generate text with a button. Generated text consists of alphanumeric characters, separated with spaces only (for simplicity)
-- User can see the generated text word count
-- User can edit the text, word count will update accodringly
+- A user can generate some text with a button. Generated text consists of alphanumeric characters, separated with spaces only (for simplicity). 
+- This text varies in length with a default bounds of 1 to 100 words. Word length varies with default bounds of 1 to 15 characters.
+- A user can see the generated text word count
+- A user can edit the text, word count will update accordingly
 
 ## Misc
 
-- Unit tests for generator
+- Added unit tests for generator
 
 ## Screenshots
 

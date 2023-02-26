@@ -14,31 +14,44 @@ final class RandomFieldTests: XCTestCase {
         sut.generateText()
         
         // Assert
-        
         XCTAssertNotEqual(sut.wordsCount, 0)
         XCTAssertNotEqual(sut.text.count, 0)
     }
 
-    func testMinimumGeneratedText() {
+    func testZeroGeneratedText() {
         // Act
-        
-        sut.generateText(maxWordCount: 1, maxWordLength: 1)
+        sut.generateText(minWordCount: 0, maxWordCount: 0)
         
         // Assert
-        
-        let expected = 1
-        
-        XCTAssertEqual(expected, sut.wordsCount)
-        XCTAssertEqual(expected, sut.text.count)
+        XCTAssertEqual(0, sut.wordsCount)
+        XCTAssertEqual(0, sut.text.count)
     }
     
-    func testRealWordCount() {
-        sut.generateText()
+    func testEqualBoundsGeneratedText() {
+        // Act
+        sut.generateText(minWordCount: 5, maxWordCount: 5)
         
+        // Assert
+        XCTAssertEqual(5, sut.wordsCount)
+    }
+    
+    func testWordCountSeparatedBySpaces() {
+        // Act
+        sut.generateText()
+                
+        // Assert
         let generatedText = sut.text
         let expectedCount = generatedText.split(separator: " ").count
-        
-        
         XCTAssertEqual(expectedCount, sut.wordsCount)
+    }
+    
+    func testTextNotEndingInSpace() {
+        // Act
+        sut.generateText()
+        
+        // Assert
+        let lastSymbol = String(sut.text.last ?? " ")
+        let spaceSymbol = " "
+        XCTAssertNotEqual(lastSymbol, spaceSymbol)
     }
 }

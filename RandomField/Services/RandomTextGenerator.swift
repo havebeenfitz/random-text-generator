@@ -12,21 +12,26 @@ final class RandomTextGenerator: ObservableObject {
     }
     
     
-    /// Generate a random string with random characters divided with spaces
+    /// Generate a random string with random characters separated with spaces
+    ///
     /// - Parameters:
-    ///   - maxWordCount: maximum words to generate
-    ///   - maxWordLength: maximum word length
-    func generateText(maxWordCount: Int = 100, maxWordLength: Int = 15) {
+    ///   - minWordCount: minimum number of wods to generate. Defaults to 1
+    ///   - maxWordCount: maximum number of words to generate. Defaults to 100
+    ///   - maxWordLength: maximum generated word length. Defaults to 15
+    func generateText(minWordCount: Int = 1, maxWordCount: Int = 100, maxWordLength: Int = 15) {
         var finalText = ""
-        let wordsCount = Int.random(in: 1 ... maxWordCount)
+        let wordsCount = Int.random(in: minWordCount ... maxWordCount)
         
-        (1 ... wordsCount).forEach { counter in
+        // Max word length should be greater than zero
+        assert(maxWordLength > 0)
+        
+        (0 ..< wordsCount).forEach { counter in
             let wordLength = Int.random(in: 1 ... maxWordLength)
             let generatedWord = (0 ..< wordLength).compactMap { _ in Characters.characters.randomElement() }
             
             finalText += generatedWord
             
-            guard counter < wordsCount else { return }
+            guard counter < wordsCount - 1 else { return }
             
             finalText += " "
         }
