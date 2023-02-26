@@ -18,13 +18,17 @@ final class RandomTextGenerator: ObservableObject {
     ///   - maxWordLength: maximum word length
     func generateText(maxWordCount: Int = 100, maxWordLength: Int = 15) {
         var finalText = ""
-        let wordsCount = Int.random(in: 0 ..< maxWordCount)
+        let wordsCount = Int.random(in: 1 ... maxWordCount)
         
-        (1 ... wordsCount).forEach { _ in
-            let wordLength = Int.random(in: 0 ..< maxWordLength)
+        (1 ... wordsCount).forEach { counter in
+            let wordLength = Int.random(in: 1 ... maxWordLength)
             let generatedWord = (0 ..< wordLength).compactMap { _ in Characters.characters.randomElement() }
             
-            finalText += generatedWord + " "
+            finalText += generatedWord
+            
+            guard counter < wordsCount else { return }
+            
+            finalText += " "
         }
         
         self.wordsCount = wordsCount
