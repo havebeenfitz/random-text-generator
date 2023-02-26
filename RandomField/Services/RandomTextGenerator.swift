@@ -11,33 +11,25 @@ final class RandomTextGenerator: ObservableObject {
         setupSubscriptions()
     }
     
-    
     /// Generate a random string with random characters separated with spaces
     ///
     /// - Parameters:
     ///   - minWordCount: minimum number of wods to generate. Defaults to 1
     ///   - maxWordCount: maximum number of words to generate. Defaults to 100
     ///   - maxWordLength: maximum generated word length. Defaults to 15
-    func generateText(minWordCount: Int = 1, maxWordCount: Int = 100, maxWordLength: Int = 15) {
-        var finalText = ""
-        let wordsCount = Int.random(in: minWordCount ... maxWordCount)
-        
+    func generateText(minWordCount: Int = 1, maxWordCount: Int = 100, maxWordLength: Int = 15) async {
         // Max word length should be greater than zero
         assert(maxWordLength > 0)
         
-        (0 ..< wordsCount).forEach { counter in
-            let wordLength = Int.random(in: 1 ... maxWordLength)
-            let generatedWord = (0 ..< wordLength).compactMap { _ in Characters.characters.randomElement() }
-            
-            finalText += generatedWord
-            
-            guard counter < wordsCount - 1 else { return }
-            
-            finalText += " "
-        }
+        let wordsCount = Int.random(in: minWordCount ... maxWordCount)
+        var finalText = ""
         
-        self.wordsCount = wordsCount
-        self.text = finalText
+        await makeText(wordsCount, maxWordLength, &finalText)
+        
+        await MainActor.run { [finalText] in
+            self.wordsCount = wordsCount
+            self.text = finalText
+        }
     }
 }
 
@@ -49,6 +41,19 @@ private extension RandomTextGenerator {
         $text
             .map { $0.split(separator: " ").count }
             .assign(to: &$wordsCount)
+    }
+    
+    func makeText(_ wordsCount: Int, _ maxWordLength: Int, _ finalText: inout String) async {
+        (0 ..< wordsCount).forEach { counter in
+            let wordLength = Int.random(in: 1 ... maxWordLength)
+            let generatedWord = (0 ..< wordLength).compactMap { _ in Characters.characters.randomElement() }
+            
+            finalText += generatedWord
+            
+            guard counter < wordsCount - 1 else { return }
+            
+            finalText += " "
+        }
     }
 }
 

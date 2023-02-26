@@ -9,35 +9,35 @@ final class RandomFieldTests: XCTestCase {
         sut.text = ""
     }
     
-    func testNotEmptyGenerated() {
+    func testNotEmptyGenerated() async {
         // Act
-        sut.generateText()
+        await sut.generateText()
         
         // Assert
         XCTAssertNotEqual(sut.wordsCount, 0)
         XCTAssertNotEqual(sut.text.count, 0)
     }
 
-    func testZeroGeneratedText() {
+    func testZeroGeneratedText() async {
         // Act
-        sut.generateText(minWordCount: 0, maxWordCount: 0)
+        await sut.generateText(minWordCount: 0, maxWordCount: 0)
         
         // Assert
         XCTAssertEqual(0, sut.wordsCount)
         XCTAssertEqual(0, sut.text.count)
     }
     
-    func testEqualBoundsGeneratedText() {
+    func testEqualBoundsGeneratedText() async {
         // Act
-        sut.generateText(minWordCount: 5, maxWordCount: 5)
+        await sut.generateText(minWordCount: 5, maxWordCount: 5)
         
         // Assert
         XCTAssertEqual(5, sut.wordsCount)
     }
     
-    func testWordCountSeparatedBySpaces() {
+    func testWordCountSeparatedBySpaces() async {
         // Act
-        sut.generateText()
+        await sut.generateText()
                 
         // Assert
         let generatedText = sut.text
@@ -45,9 +45,9 @@ final class RandomFieldTests: XCTestCase {
         XCTAssertEqual(expectedCount, sut.wordsCount)
     }
     
-    func testTextNotEndingInSpace() {
+    func testTextNotEndingInSpace() async {
         // Act
-        sut.generateText()
+        await sut.generateText()
         
         // Assert
         let lastSymbol = String(sut.text.last ?? " ")

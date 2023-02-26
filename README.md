@@ -21,7 +21,7 @@
 
 | dark | light |
 | ---- | ----- |
-| <img src="https://user-images.githubusercontent.com/31866271/221417469-67418520-ecc4-43dd-b6bb-5aa1c8b41f3a.png" width="300"> | <img src="https://user-images.githubusercontent.com/31866271/221417612-907e9124-0594-4195-92da-109a99f0c4bc.png" width="300">|
+| <img src="https://user-images.githubusercontent.com/31866271/221432162-12a6ee4b-2683-4628-abf9-e02c79e44856.png" width="300"> | <img src="https://user-images.githubusercontent.com/31866271/221432165-df8d8829-b552-4dd7-b31b-4a8fe5832a42.png" width="300">|
 
 
 ## To improve
